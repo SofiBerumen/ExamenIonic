@@ -1,32 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Repositorios en GitHub
-    </ion-title>
+    <ion-title>modal</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="stacked">Dato a buscar</ion-label>
-    <ion-input [(ngModel)]="text"></ion-input>
-  </ion-item>
-  <ion-button (click)="consulta()">Buscar</ion-button>
-  <br><br>
   <ion-list>
-    <ion-item-sliding *ngFor="let info of datos">
+    <ion-item-sliding *ngFor="let info of jaja">
         <ion-avatar>
           <img [src]="info.owner.avatar_url">
         </ion-avatar>
         <ion-item>
           <ion-label width="35%">Nombre: {{ info.name }}</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="modal()">
           <ion-label width="35%">Repositorio: {{ info.archive_url}}</ion-label>
         </ion-item>
 
 
     </ion-item-sliding>
   </ion-list>
-
 </ion-content>
